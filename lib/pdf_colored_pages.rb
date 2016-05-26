@@ -21,6 +21,9 @@ module PdfColoredPages
       raise "File '#{pdf_file}' not found"
     end
     gs_output = `gs  -o - -sDEVICE=inkcov #{pdf_file}`
+    if gs_output.include? 'command not found'
+      raise 'You need to install ghostscript 9.05 or higher'
+    end
     GhostScriptParser.new gs_output
   end
 end
