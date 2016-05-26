@@ -34,6 +34,11 @@ PdfColoredPages.as_range_string(/path/to/pdf.pdf)
 # returns: 1,3-4
 ```
 
+Shell:
+
+    $ pdf_colored_pages /Users/mojomacssd/rails/gems/pdf_colored_pages/test/combined.pdf
+
+
 Just Check:
 ```ruby
 PdfColoredPages.colored_pages?(/path/to/pdf.pdf)
@@ -43,6 +48,7 @@ PdfColoredPages.colored_pages?(/path/to/pdf.pdf)
 Test:
 
     $ rake test
+
 
 ## Contributing
 
