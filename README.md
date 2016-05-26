@@ -38,6 +38,10 @@ PdfColoredPages.colored_pages?(/path/to/pdf.pdf)
 # returns: true or false
 ```
 
+Test:
+
+    $ rake test
+
 ## Contributing
 
 1. Fork it ( https://github.com/RedRoosterMobile/pdf-colored-pages/fork )
