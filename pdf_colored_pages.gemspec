@@ -4,11 +4,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'pdf_colored_pages/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'pdf_colored_pages'
-  spec.version       = PdfColoredPages::VERSION
+  spec.name        = 'pdf_colored_pages'
+  spec.version     = PdfColoredPages::VERSION
   spec.authors     = ['Thomas Ranker']
   spec.email       = ['info@redroostermobile.com']
-  spec.homepage    = 'http://redroostermobile.com'
+  spec.homepage    = 'https://github.com/RedRoosterMobile/pdf-colored-pages'
   spec.summary     = 'Get the colored pages of a pdf'
   spec.description = 'Gets the colored pages of a PDF by parsing Ghostscript (>9.05) output'
   spec.license     = 'MIT'
