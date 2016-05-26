@@ -33,20 +33,18 @@ class PdfColoredPages::GhostScriptParser
   end
 
   def colored_pages
-    if @colored_pages.length==0
-      current_page = 0
-      @gs_output.each_line do |line|
-        page_line = line.match(/Page [0-9]+/)
-        if page_line
-          current_page = page_line.to_s.split(' ').last.to_i
-        elsif current_page > 0 and line.start_with? ' '
-          # 0.05803  0.05803  0.05803  0.00000 CMYK OK
-          parts = line.scan(/(\d[.]\d+)/)
-          # first three equal is grey! ignore key (black)
-          unless (parts.first == parts[1]) and (parts.first == parts[2])
-            # first C,M,Y are different, colored page
-            @colored_pages.push current_page.to_i
-          end
+    current_page = 0
+    @gs_output.each_line do |line|
+      page_line = line.match(/Page [0-9]+/)
+      if page_line
+        current_page = page_line.to_s.split(' ').last.to_i
+      elsif current_page > 0 and line.start_with? ' '
+        # 0.05803  0.05803  0.05803  0.00000 CMYK OK
+        parts = line.scan(/(\d[.]\d+)/)
+        # first three equal is grey! ignore key (black)
+        unless (parts.first == parts[1]) and (parts.first == parts[2])
+          # first C,M,Y are different, colored page
+          @colored_pages.push current_page.to_i
         end
       end
     end
