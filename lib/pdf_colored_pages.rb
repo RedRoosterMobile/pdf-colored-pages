@@ -1,4 +1,4 @@
-require "pdf_colored_pages/version"
+require 'pdf_colored_pages/version'
 
 module PdfColoredPages
   def self.as_range_string (pdf_file)
@@ -18,7 +18,7 @@ module PdfColoredPages
 
   def self.get_ghostscript_output(pdf_file)
     unless File.exist? pdf_file
-      # throw error
+      raise "File '#{pdf_file}' not found"
     end
     gs_output = `gs  -o - -sDEVICE=inkcov #{pdf_file}`
     GhostScriptParser.new gs_output
