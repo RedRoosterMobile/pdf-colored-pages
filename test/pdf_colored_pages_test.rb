@@ -20,4 +20,10 @@ class PdfColoredPagesTest < Test::Unit::TestCase
     assert PdfColoredPages.colored_pages?(TEST_PDF)
   end
 
+  def test_404
+    assert_raise do
+      PdfColoredPages.colored_pages?('/tmp/preciousbodilyfluids.pdf')
+    end
+  end
+
 end
