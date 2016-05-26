@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/RedRoosterMobile/pdf-colored-pages/badge.svg?branch=master)](https://coveralls.io/github/RedRoosterMobile/pdf-colored-pages?branch=master)
+=========
 # PdfColoredPages
 
 Ruby Gem to check which pages of a pdf contain color and output those.

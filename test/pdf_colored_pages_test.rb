@@ -1,4 +1,5 @@
 require 'test/unit'
+require 'test/test_helper'
 require 'pdf_colored_pages'
 
 class PdfColoredPagesTest < Test::Unit::TestCase
