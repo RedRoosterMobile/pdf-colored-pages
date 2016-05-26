@@ -21,7 +21,7 @@ class PdfColoredPagesTest < Test::Unit::TestCase
   end
 
   def test_404
-    assert_raise do
+    assert_raise( RuntimeError, "File '/tmp/preciousbodilyfluids.pdf' not found") do
       PdfColoredPages.colored_pages?('/tmp/preciousbodilyfluids.pdf')
     end
   end
