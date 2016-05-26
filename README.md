@@ -36,7 +36,8 @@ PdfColoredPages.as_range_string(/path/to/pdf.pdf)
 
 Shell:
 
-    $ pdf_colored_pages /Users/mojomacssd/rails/gems/pdf_colored_pages/test/combined.pdf
+    $ pdf_colored_pages ./path/to/pdf.pdf
+    # outputs 1,3-4
 
 
 Just Check:
